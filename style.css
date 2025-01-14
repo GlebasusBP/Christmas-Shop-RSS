@@ -1,6 +1,19 @@
+:root {
+   --main-color: #FF4646;
+   --text-color: #FFFFFF;
+   --first-font: 'Montserrat';
+   --second-font: 'Allura';
+}
+
 body {
-   font-family: 'Montserrat';
+   font-family: var(--first-font);
    font-weight: 600;
+   margin: 0;
+   color: var(--text-color)
+}
+
+h1, h2, h3, h4, h5, h6, p {
+   margin: 0;
 }
 
 a {
@@ -18,9 +31,57 @@ ul {
    margin: 0 auto;
 }
 
+.btn {
+   /* width: 235px; */
+   height: 56px;
+   font-family: var(--first-font);
+   color: var(--text-color);
+   text-transform: uppercase;
+   font-weight: 600;
+   letter-spacing: 0.05em;
+   line-height: 130%;
+   font-size: 12px;
+   padding: 20px 32px;
+   background-color: #181C29;
+   border: none;
+   border-radius: 20px;
+   cursor: pointer;
+   text-align: center;
+   transition: 0.1s;
+}
+
+.caption {
+   font-family: var(--second-font);
+   font-weight: 400;
+   font-size: 1.5em;
+   letter-spacing: 0.05em;
+   line-height: 100%;
+}
+
+.btn:hover {
+   color: #000;
+   background-color: var(--text-color);
+   transition: 0.1s;
+}
+
+.header-two {
+   font-size: 1.5em;
+   font-weight: 600;
+   line-height: 152%;
+   letter-spacing: 0.16em;
+   text-transform: uppercase;
+}
+
+.paragraph {
+   font-size: 1em;
+   font-weight: 400;
+   line-height: 148%;
+}
+
 .header>.container {
    display: flex;
    justify-content: space-between;
+   padding: 12px 0;
 }
 
 .logo {
@@ -34,6 +95,10 @@ ul {
    height: 24px;
 }
 
+.navigation {
+   width: 376px;
+}
+
 .navigation-list {
    display: flex;
    gap: 8px;
@@ -42,7 +107,7 @@ ul {
 .navigation-link, .logo {
    font-size: 12px;
    line-height: 130%;
-   letter-spacing: 5%;
+   letter-spacing: 0.05em;
    text-transform: uppercase;
    padding: 12px 20px;
    border-radius: 12px;
@@ -52,4 +117,74 @@ ul {
    color: #FF4646;
    background-color: rgba(255, 70, 70, 0.1);
    transition: 0.2s;
+}
+
+.hero {
+   background-color: var(--main-color);
+   background-image: url('src/images/bg-snow.png');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size:cover;
+   border-radius: 20px 20px 0 0;
+
+}
+
+.hero > .container {
+   padding: 120px 0;
+   background-image: url('src/images/bg-ball.png');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+
+.hero > .container > .wrapper {
+   width: 432px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 12px;
+}
+
+.hero > .container > .wrapper > .title {
+   font-size: 2em;
+   line-height: 150%;
+   letter-spacing: 0.18em;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.about {
+   padding: 60px 0;
+   background-color: var(--main-color);
+   background-image: url('src/images/bg-snow.png');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size:cover;
+}
+
+.about-info {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   background-color: #FFFFFF;
+   border-radius: 20px;
+}
+
+.about-info-text {
+   display: flex;
+   flex-direction: column;
+   padding: 160px 152px 160px 60px;
+   gap: 20px;
+   color: #000;
+}
+
+.about-info-text > .caption {
+   color: var(--main-color);
+}
+
+.about-info__poster {
+   background-image: url('./src/images/santa.png');
+   background-repeat: no-repeat;
+   background-size: contain;
+   border-radius: 20px;
 }
